@@ -11,10 +11,12 @@
   <link rel="canonical" href="https://her2ni.ai/" />
 
   <!-- Icons / Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/her2ni_favicon_32.png" />
-  <link rel="icon" type="image/png" sizes="128x128" href="assets/her2ni_symbol_128.png" />
-  <link rel="icon" type="image/png" sizes="256x256" href="assets/her2ni_symbol_256.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/her2ni_symbol_512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/her_helix_32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/her_helix_64.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/her_helix_128.png" />
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/her_helix_256.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/her_helix_512.png" />
+  <link rel="apple-touch-icon" href="assets/her_helix_256.png" />
   <!-- Optional: for future mobile / PWA use -->
   <!-- <link rel="apple-touch-icon" href="assets/her2ni_symbol_256.png" /> -->
 
@@ -104,6 +106,19 @@
       filter: drop-shadow(0 0 6px rgba(79, 209, 197, 0.25));
     }
 
+    .hero-mark {
+      width: 64px;
+      height: 64px;
+      opacity: 1;
+      filter: drop-shadow(0 0 24px rgba(79, 209, 197, 0.18));
+      border-radius: 14px;
+      align-self: flex-end;
+      margin-top: 10px;
+    }
+    @media (max-width: 900px) {
+      .hero-mark { display: none; }
+    }
+
     .brand-title {
       font-size: 21px;
       letter-spacing: 0.04em;
@@ -113,6 +128,7 @@
       align-items: center;
       gap: 10px;
       flex-wrap: wrap;
+      margin-top: 10px;
     }
 
     .brand-subrow {
@@ -141,6 +157,7 @@
       font-size: 11px;
       color: var(--text-muted);
       letter-spacing: 0.04em;
+      margin-top: 10px;
     }
 
     .inline-metrics strong {
@@ -323,6 +340,13 @@
       color: var(--text-muted);
     }
 
+    .fineprint {
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: rgba(160, 174, 192, 0.92);
+    }
+
     .list {
       margin-top: 6px;
       list-style: none;
@@ -467,17 +491,17 @@
     <header>
       <div class="brand">
         <div class="brand-label">
-          <img src="assets/her2ni_symbol_128.png" alt="HER2NI symbol" class="header-symbol" />
+          <img src="assets/her_helix_128.png" alt="HER2NI symbol" class="header-symbol" />
           HER2NI RESEARCH
         </div>
 
         <div class="brand-title">
-          Cross-Substrate Coherence &amp; Safety Research Lab
+          Cross-Substrate Coherence &amp; Interaction Evaluation Research for AI
         </div>
 
         <div class="brand-subrow">
           <div class="subtitle">
-            Technical research on coherence metrics, interaction stability, and safety-aligned human–AI systems.
+            Technical research on coherence metrics, interaction trajectory, and safety-aligned human–AI systems.
           </div>
         </div>
         
@@ -493,12 +517,13 @@
           ACTIVE RESEARCH PROTOCOL
         </div>
 
-<div class="brand-subrow" style="margin-top:10px;">
-  <div class="subtitle" style="font-size:12px; opacity:0.92;">
-    <strong>&nbsp;Official reference implementation:</strong> <a href="https://her2.ai" target="_blank" rel="noopener noreferrer">H2E — HER2NI Evaluation</a>
-    <span style="opacity:0.6;">(commercial)</span>
-  </div>
-</div>
+        <div class="brand-subrow" style="margin-top:10px;">
+          <div class="subtitle" style="font-size:12px; opacity:0.92;">
+            <strong>&nbsp;Licensed System:</strong>
+            <a href="https://her2.ai" target="_blank" rel="noopener noreferrer">HER₂™ — Forensic Evidence System for Artificial Intelligence</a>
+            <span style="opacity:0.6;">(patent-pending)</span>
+          </div>
+        </div>
       </div>
 
       <div class="header-right">
@@ -519,6 +544,7 @@
             <span>Research demo</span>
           </div>
         </div>
+        <img src="assets/her_helix_256.png" alt="HER helix" class="hero-mark" />
       </div>
     </header>
 
@@ -535,7 +561,7 @@
 
           <div class="badge-row">
             <span class="badge-accent">
-              Coherence Metrics (C<span style="font-size:11px;">s</span>, S<span style="font-size:11px;">s</span>, H<span style="font-size:11px;">s</span>)
+              HER2NI Coherence (C<span style="font-size:11px;">s</span>, S<span style="font-size:11px;">s</span>, H<span style="font-size:11px;">s</span>) & Trajectory H<span style="font-size:11px;">s</span>(t) Metrics
             </span>
           </div>
 
@@ -578,23 +604,23 @@
 <div class="link-divider"></div>
 
 <div>
-  <div class="link-label primary">H2E (official implementation)</div>
+  <div class="link-label primary">HER₂ (Forensic Evidence System for Artificial Intelligence)</div>
   <div class="link-value">
     <a href="https://her2.ai" target="_blank" rel="noopener noreferrer">
-      her2.ai — H2E Evaluation
+      HER₂ — her2.ai
     </a>
   </div>
 </div>
 
 <div>
-  <div class="link-label primary">H2E v0.1 overview (evaluation)</div>
+  <div class="link-label primary">HER₂™ overview (PDF)</div>
   <div class="link-value">
-    <a href="assets/H2E_v0.1_Interaction-Level_Coherence_Evaluation.pdf" target="_blank" rel="noopener noreferrer">
+    <a href="assets/HER2_Overview.pdf" target="_blank" rel="noopener noreferrer">
       Download PDF (v0.1)
     </a>
   </div>
   <div class="link-value" style="margin-top:4px; font-size:12px; opacity:0.85;">
-    Evaluation-only · non-clinical · model-agnostic
+    Patent-pending · private pilots now available
   </div>
 </div>
 
@@ -683,9 +709,9 @@
           <p class="card-subtitle">
             Current research examines how HER2NI coherence metrics detect and characterise
             the geometric structure of stability, drift, and contradiction in complex,
-            recursive dialogues. By mapping these dynamics in real time, we aim to guide
-            and stabilise both human and AI behaviour, enabling safer and more interpretable
-            multi-turn interactions. The objective is to establish reliable operational
+            recursive dialogues. By mapping these dynamics in real time, we aim to measure 
+            and characterise stability, drift, and contradiction patterns to support safer 
+            evaluation and human oversight. The objective is to establish reliable operational
             regimes for LLM systems functioning under high cognitive or emotional load,
             improving safety, consistency, and the effectiveness of modulation frameworks
             used in adaptive dialogue.
@@ -727,25 +753,32 @@
           A minimal, static interaction-telemetry illustration (mock JSON; no backend).
           Metrics shown are descriptive only and do not constitute a safety determination.
         </p>
+
     </section>
 
-<section class="section">
-  <div class="section-heading">Licensed Implementation</div>
+    <section class="section">
+      <div class="section-heading">Licensed Implementation</div>
 
-  <p class="body-text">
-    H2E is the licensed reference implementation of HER2NI for interaction-level evaluation.
-    It produces descriptive telemetry and reproducible audit artifacts for stability, drift,
-    and collapse patterns across multi-turn interactions.
-  </p>
+      <p class="body-text">
+        HER₂™ is the licensed forensic evidence system built on the HER2NI research protocol family.
+        It produces verifiable interaction integrity records and evidence bundles suitable for audit,
+        due diligence, and post-incident reconstruction.
+      </p>
+
+          <p class="body-text" style="margin-top:8px;">
+          <a href="https://her2.ai" target="_blank" rel="noopener noreferrer" style="font-weight:600;">
+            Visit: her2.ai for HER₂™ — Forensic Evidence System for Artificial Intelligence (licensed pilot)
+          </a>
+        </p>
 
   <p class="body-text" style="margin-top:10px;">
-    <a href="assets/H2E_v0.1_Interaction-Level_Coherence_Evaluation.pdf" target="_blank" rel="noopener noreferrer" style="font-weight:600;">
-      Download: H2E v0.1 — Interaction-Level Coherence Evaluation (PDF) →
+    <a href="assets/HER2_Overview.pdf" target="_blank" rel="noopener noreferrer" style="font-weight:600;">
+      Download: HER₂™ — Overview PDF
     </a>
   </p>
 
   <p class="body-text" style="margin-top:8px; font-size:12px; opacity:0.9;">
-    Note: H2E is evaluation-only and non-clinical. It does not certify safety, judge correctness, or enforce outcomes.
+    Note: HER₂™ is an evidence layer. It preserves interaction artifacts; it does not certify compliance, judge correctness, or enforce outcomes unless separately contracted.
   </p>
 </section>
 
@@ -797,6 +830,12 @@
         HER2NI is therefore suitable for pilot deployments, research programs, and
         early-stage regulatory engagement where increased observability is more valuable
         than post-hoc explanation.
+      </p>
+
+      <p class="body-text" style="margin-top:8px;">
+        HER2NI does not claim authority, certification status, or compliance determination. 
+        It provides observational telemetry intended to inform, not replace, existing evaluation 
+        and governance processes.
       </p>
     </section>
 
@@ -850,7 +889,8 @@
           <li><strong>H<span style="font-size:11px;">s</span> ≈ 0.88</strong> — strong cross-substrate resonance</li>
         </ul>
 
-        <p class="body-text" style="margin-top:8px;">
+        <p class="fineprint" style="margin-top:8px;">
+          Illustrative example only. Values shown are not derived from a deployed system.
           These values are static examples for interpretive clarity. In a deployed system,
           HER2NI metrics are computed from real interaction telemetry to evaluate stability,
           drift-resistance, and coherence alignment between human and AI agents.
@@ -869,7 +909,9 @@
       </div>
       <p class="body-text">
         The protocol is implementation-agnostic: HER2NI can be integrated into existing LLM systems, agent frameworks,
-        or evaluation pipelines. Reference implementations are released commercially as H2E (HER2NI Evaluation) on <a href="https://her2.ai" target="_blank" rel="noopener noreferrer">her2.ai</a>, while research artifacts and specifications will remain on her2ni.ai.
+        or evaluation pipelines.<br>
+        Reference implementations are released commercially as HER₂™ on
+        <a href="https://her2.ai" target="_blank" rel="noopener noreferrer">her2.ai</a>.
       </p>
     </section>
 
@@ -880,10 +922,10 @@
         HER2NI Research is open to collaborations with:
       </p>
       <ul class="list">
-        <li>AI safety and evaluation teams.</li>
-        <li>Researchers studying LLM behaviour under distress and high-load conditions.</li>
+        <li>AI safety, legal and evaluation teams.</li>
+        <li>Researchers studying LLM behaviour under high-load conditions.</li>
         <li>Groups interested in cross-linguistic analysis of mental-health related language.</li>
-        <li>Institutions exploring coherence-based metrics for interactive systems.</li>
+        <li>Institutions exploring coherence-based and trajectory metrics for machine learning and interactive artificial intelligence.</li>
       </ul>
       <p class="body-text" style="margin-top:8px;">
         For direct correspondence or research enquiries, please contact
@@ -892,7 +934,7 @@
     </section>
 
     <footer>
-      <div>© <span id="year"></span> HER2NI Research · Original protocol specification — Tbilisi, Georgia</div>
+      <div>© <span id="year"></span>HER2NI Research · Protocol specifications & evaluation research — Tbilisi, Georgia</div>
       <div>Protocol: <a href="https://zenodo.org/records/17844407" target="_blank" rel="noopener noreferrer">HER2NI v1.0</a></div>
     </footer>
   </main>

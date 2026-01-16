@@ -32,6 +32,11 @@ HER2NI for interaction-level telemetry, drift detection, and audit workflows.
 Evaluation tooling, scoring pipelines, and test vectors live in the H2E repository.
 HER2NI itself remains a protocol and research specification.
 
+### H2E Pilot Kit (v0.1)
+A compact, evaluation-only reference implementation of the HER2NI protocol.
+
+[H2E v0.1 — Interaction-Level Coherence Evaluation (PDF)](/assets/H2E_v0.1_Interaction-Level_Coherence_Evaluation.pdf)
+
 ---
 
 ## HER2NI Reference Implementation — v0.1 (Experimental)
@@ -67,7 +72,7 @@ HER2NI v0.1 implements the **minimum viable instrumentation layer** required to 
   - Hₛ(t) curves
   - Drift magnitude estimation
   - Collapse / instability markers
-- **AOME (Adaptive Offset Modulation Engine — experimental, advisory)**
+- **AOME (Adaptive Offset Modulation Engine — experimental, advisory-only)**
   - Deterministic mode selection
   - Structured *recommendations* for behavior modulation only (non-executing)
 - **Reproducible demo artifacts**
