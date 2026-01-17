@@ -18,7 +18,8 @@ Permission is NOT granted to:
 - copy or redistribute this repository or its contents in whole or in part,
 - create derivative protocols or systems presented as HER2NI or compatible equivalents,
 - use HER2NI branding, names, or marks without written consent,
-- represent these materials as certified, endorsed, or approved products.
+- represent these materials as certified, endorsed, or approved products,
+- train, fine-tune, or benchmark commercial systems using these materials beyond fair academic citation.
 
 This repository does not grant any license to software implementations,
 evaluation engines, or commercial systems derived from HER2NI.
