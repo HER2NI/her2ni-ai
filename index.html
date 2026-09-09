@@ -85,6 +85,11 @@
         "alternateName": "HER2NI®",
         "url": "https://her2ni.ai/",
         "email": "her@her2ni.ai",
+        "identifier": [
+          { "@type": "PropertyValue", "propertyID": "SAM.gov UEI", "value": "YFRTLDXDCTZ8" },
+          { "@type": "PropertyValue", "propertyID": "NCAGE", "value": "STVK9" },
+          { "@type": "PropertyValue", "propertyID": "Georgia company identification number", "value": "404813975" }
+        ],
         "sameAs": [
           "https://github.com/HER2NI"
         ]
@@ -1214,6 +1219,21 @@
       letter-spacing: 0.09em;
     }
 
+    .procurement-divider {
+      grid-column: 1 / -1;
+      height: 1px;
+      margin: 0.75rem 0 0.65rem;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(145, 221, 255, 0.20) 12%,
+        rgba(145, 221, 255, 0.20) 88%,
+        transparent 100%
+      );
+      box-shadow: 0 0 12px rgba(19, 137, 255, 0.07);
+      pointer-events: none;
+    }
+
     .procurement-verify {
       color: #dceaf5;
       text-decoration-color: rgba(145, 221, 255, 0.42);
@@ -1785,15 +1805,7 @@
     <a class="house-mark" href="#her" aria-label="HER2NI® home">
       <span class="house-home" aria-hidden="true"><span class="house-word">HER<span class="house-two">2</span>NI</span><sup class="house-reg">®</sup></span>
     </a>
-    <!-- VOICE RULE (MER decision, 8 Aug 2026 — do not flip back to "it"):
-         H.E.R may be personified as she/her in public-facing product and experiential
-         language. Personification confers no institutional, legal, decisional or
-         autonomous authority. Never attach an authority-bearing verb to "she" — she
-         does not approve, authorise, determine, dispose, or act for the institution.
-         She may analyse, coordinate, preserve, compare, synthesise, present and
-         maintain interaction state. Technical, evidentiary and governance copy keeps
-         "H.E.R", "the H.E.R system", "the architecture". Lowercase "she" in prose;
-         uppercase only in nav and section titles. -->
+
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#her">H.E.R</a>
       <a href="#governance">Governance</a>
@@ -2064,26 +2076,37 @@
             <dt>NCAGE Code</dt>
             <dd class="procurement-code">STVK9</dd>
 
-            <dt>Status</dt>
-            <dd class="procurement-code">A - ACTIVE record</dd>
+            <dt>NCAGE status</dt>
+            <dd class="procurement-code">A — ACTIVE record</dd>
 
-            <dt>Official record</dt>
+            <dt>NCAGE record</dt>
             <dd><a class="procurement-verify" href="https://eportal.nspa.nato.int/Codification/CageTool/cage-view/stvk9" rel="noopener noreferrer">Verify with NSPA →</a></dd>
-            
+
+            <dt>UEI Code</dt>
+            <dd class="procurement-code">YFRTLDXDCTZ8</dd>
+
+            <dt>UEI status</dt>
+            <dd class="procurement-code">Active — date 9 Sep 2026</dd>
+
+            <dt>UEI record</dt>
+            <dd><a class="procurement-verify" href="https://sam.gov/entity-information" rel="noopener noreferrer">Verify with SAM.gov →</a></dd>
+
+            <div class="procurement-divider" aria-hidden="true"></div>
+
             <dt>Organization</dt>
             <dd>HER2NI LLC</dd>
 
             <dt>Country</dt>
             <dd>Georgia</dd>
 
-            <dt>Identification No.</dt>
+            <dt>Georgian ID</dt>
             <dd>404813975</dd>
           </dl>
         </div>
 
-        <p>HER2NI maintains NCAGE STVK9 for NATO Codification System and U.S. federal supplier-registration workflows. H.E.R is being developed for bounded government and defence evaluation, pilot and procurement pathways.</p>
-        <p>The current NCAGE record is independently verifiable through the NATO Support and Procurement Agency.</p>
-        <p class="procurement-disclaimer">NCAGE assignment does not imply government affiliation, endorsement, approved-vendor status, regulatory approval, certification or award.</p>
+        <p>HER2NI LLC is registered in the U.S. federal government's System for Award Management (SAM.gov). The registration was activated on 9 September 2026 for All Awards. NCAGE STVK9 identifies the company in NATO Codification System and U.S. federal supplier-registration workflows.</p>
+        <p>H.E.R is being developed for bounded government and defence evaluation, pilot and procurement pathways. The official records linked above are the reference for current registration status.</p>
+        <p class="procurement-disclaimer">SAM.gov registration and NCAGE assignment do not imply government affiliation, endorsement, approved-vendor status, regulatory approval, product certification, or a contract or grant award. Eligibility remains specific to each procurement.</p>
       </div>
     </section>
 
@@ -2107,7 +2130,7 @@
     <address class="legal-entity">
       <strong>HER2NI LLC</strong> <span class="ka">შპს ჰერ2ენაი</span><br />
       Identification No. 404813975<br />
-      NCAGE <a href="https://eportal.nspa.nato.int/Codification/CageTool/cage-view/stvk9" rel="noopener noreferrer">STVK9</a><br />
+      NCAGE <a href="https://eportal.nspa.nato.int/Codification/CageTool/cage-view/stvk9" rel="noopener noreferrer">STVK9</a> · UEI <a href="https://sam.gov/entity-information" rel="noopener noreferrer">YFRTLDXDCTZ8</a><br />
       Sakartvelo (Georgia), Tbilisi, Krtsanisi district, Nino and Ilia Nakashidze Street N 1,
       (former Avlev) Building N3, Apartment N3
     </address>
@@ -2204,6 +2227,35 @@
       }
 
       requestUpdate();
+    })();
+  </script>
+  <!-- HER2NI external-link policy v1 -->
+  <script>
+    (() => {
+      for (const link of document.querySelectorAll('a[href]')) {
+        try {
+          const url = new URL(link.getAttribute("href"), window.location.href);
+
+          if (
+            (url.protocol === "http:" || url.protocol === "https:") &&
+            url.origin !== window.location.origin
+          ) {
+            link.target = "_blank";
+
+            const rel = new Set(
+              (link.getAttribute("rel") || "")
+                .split(/\s+/)
+                .filter(Boolean)
+            );
+
+            rel.add("noopener");
+            rel.add("noreferrer");
+            link.setAttribute("rel", [...rel].join(" "));
+          }
+        } catch (_) {
+          // Leave malformed or non-URL hrefs unchanged.
+        }
+      }
     })();
   </script>
 </body>

@@ -887,5 +887,34 @@
     </footer>
   </main>
 
+  <!-- HER2NI external-link policy v1 -->
+  <script>
+    (() => {
+      for (const link of document.querySelectorAll('a[href]')) {
+        try {
+          const url = new URL(link.getAttribute("href"), window.location.href);
+
+          if (
+            (url.protocol === "http:" || url.protocol === "https:") &&
+            url.origin !== window.location.origin
+          ) {
+            link.target = "_blank";
+
+            const rel = new Set(
+              (link.getAttribute("rel") || "")
+                .split(/\s+/)
+                .filter(Boolean)
+            );
+
+            rel.add("noopener");
+            rel.add("noreferrer");
+            link.setAttribute("rel", [...rel].join(" "));
+          }
+        } catch (_) {
+          // Leave malformed or non-URL hrefs unchanged.
+        }
+      }
+    })();
+  </script>
 </body>
 </html>
