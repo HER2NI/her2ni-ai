@@ -1,6 +1,6 @@
 # H.E.R™ by HER2NI® — Intelligence Synthesis™
 
-**Many intelligences. One voice.™**
+**Intelligence Synthesis™ for consequential decisions in government, defence and assurance.**
 
 This repository publishes the institutional and research web surface for
 **H.E.R™ by HER2NI®** at:
@@ -25,6 +25,14 @@ liability company registered in Sakartvelo (Georgia), Identification
 No. **404813975**.
 
 Institutional site: https://her2ni.ai
+
+Public procurement identity:
+
+- SAM.gov UEI: `YFRTLDXDCTZ8`
+- NCAGE: `STVK9`
+
+Current registration status and official verification links are published at
+https://her2ni.ai/#procurement
 
 ---
 
