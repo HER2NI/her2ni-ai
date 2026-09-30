@@ -637,6 +637,29 @@
       font-size: clamp(1rem, 1.65vw, 1.16rem);
     }
 
+    .synthesis-gain-title {
+      max-width: 35rem;
+    }
+
+    .synthesis-gain-function {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+      color: #7fc8f5;
+      font-family: var(--mono);
+      font-size: clamp(1.5rem, 2.9vw, 2.55rem);
+      font-weight: 400;
+      letter-spacing: -0.035em;
+      line-height: 1.08;
+      text-transform: none;
+      white-space: nowrap;
+    }
+
+    .synthesis-gain-statement {
+      display: block;
+      margin-top: 0.72rem;
+    }
+
     .system-layout {
       display: grid;
       grid-template-columns: minmax(0, 0.76fr) minmax(22rem, 1.24fr);
@@ -823,16 +846,21 @@
       opacity: 1;
     }
 
-    .ring-copy p {
+    .ring-copy > p {
       max-width: 42rem;
       margin: 1.25rem 0 0;
       color: var(--muted);
       font-size: 1.05rem;
     }
 
-    .ring-copy p:first-of-type {
+    .ring-copy > p:first-of-type {
       color: var(--ink);
       font-size: 1.28rem;
+    }
+
+    .ring-copy > p.ring-state-label:first-of-type {
+      color: #7fc8f5;
+      font-size: 1.0625rem;
     }
 
     /* Legal notation, not body copy. */
@@ -1244,7 +1272,7 @@
       color: var(--cyan);
     }
 
-    .procurement-copy p {
+    .procurement-copy > p {
       max-width: 43rem;
       margin: 0;
       color: var(--muted);
@@ -1255,17 +1283,13 @@
       margin-top: 1.35rem;
     }
 
-    .procurement-copy p + p {
+    .procurement-copy > p + p {
       margin-top: 1rem;
     }
 
-    .procurement-disclaimer {
-      padding-left: 1rem;
-      border-left: 1px solid var(--line-strong);
-      color: var(--quiet) !important;
-      font-family: var(--mono);
-      font-size: 0.7rem !important;
-      line-height: 1.7;
+    .procurement-boundary {
+      max-width: 43rem;
+      margin-top: 1.35rem;
     }
 
     .contact {
@@ -1827,7 +1851,7 @@
       <figure class="ring-figure">
         <img
           src="assets/her_ring_spiral_alpha_v2.png"
-          alt="H.E.R Ring™"
+          alt="H.E.R Ring"
           class="her-ring-image her-ring-image--hero"
           width="872"
           height="872"
@@ -1836,7 +1860,7 @@
         />
       </figure>
 
-      <p class="slogan"><span class="slogan-line">Intelligence Synthesis<sup class="slogan-tm">™</sup></span><span class="slogan-line">Many intelligences. One voice.<sup class="slogan-tm">™</sup></span></p>
+      <p class="slogan"><span class="slogan-line">Intelligence Synthesis<sup class="slogan-tm">™</sup> | synthesisGain(...)<sup class="slogan-tm">™</sup></span><span class="slogan-line">Many intelligences. Single voice.<sup class="slogan-tm">™</sup></span></p>
       <div class="hero-rule" aria-hidden="true"></div>
       <p class="descriptor">Intelligence synthesis for consequential decisions.</p>
       <p class="hero-supporting">Independent multi-modal AI routes.<br>Verifiable provenance. Evidenced dissent.<br>Governed synthesis into one single voice.</p>
@@ -1941,7 +1965,7 @@
             <li>Approved independent intelligences</li>
             <li>Evidenced dissent preserved</li>
             <li>Intelligent cross-route analysis</li>
-            <li class="flow-focus"><a class="flow-focus-link" href="#ring" aria-label="H.E.R’s synthesis — see H.E.R Ring">H.E.R’S SYNTHESIS</a></li>
+            <li class="flow-focus"><a class="flow-focus-link" href="#synthesis-gain" aria-label="H.E.R’s synthesis — see synthesisGain definition">H.E.R’S SYNTHESIS | <span style="text-transform: none;">synthesisGain(...)<sup class="slogan-tm">™</sup></span></a></li>
             <li>Human reviewer disposition</li>
             <li>Signed cryptographic record</li>
           </ol>
@@ -1954,21 +1978,42 @@
       </div>
     </section>
 
+    <section class="section shell" id="synthesis-gain" aria-labelledby="synthesis-gain-title">
+      <p class="section-label">SYNTHESIS GAIN</p>
+      <div class="system-layout">
+        <div class="system-copy">
+          <h2 class="section-title synthesis-gain-title" id="synthesis-gain-title"><span class="synthesis-gain-function">synthesisGain(...)<sup class="slogan-tm">™</sup></span><span class="synthesis-gain-statement">Synthesis must earn its complexity.</span></h2>
+          <p>H.E.R does not assume that combining more intelligences produces a better answer.</p>
+        </div>
+
+        <div class="ring-copy">
+          <p><span style="font-family: var(--mono);">synthesisGain(...)<sup class="slogan-tm">™</sup></span> is H.E.R’s case-specific measure of whether governed synthesis adds decision value over a defined comparison answer.</p>
+          <p>Gain may appear as a stronger conclusion, greater completeness, clearer separation of decision from supporting evidence, preservation of material minority views or uncertainty, or a more verifiable path to human judgment.</p>
+          <p>Gain is not presumed. It may be positive, absent or negative.</p>
+
+          <section class="truth-boundary" aria-labelledby="synthesis-gain-boundary-title">
+            <h3 id="synthesis-gain-boundary-title">SYNTHESIS GAIN BOUNDARY</h3>
+            <p>H.E.R does not treat agreement, additional length, model count or rhetorical confidence as evidence of synthesis gain. A gain claim requires a defined comparator and reviewable evidence. Where the evidence does not establish gain, H.E.R will reveal this.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
     <section class="section shell ring-section" id="ring" aria-labelledby="ring-title">
       <img
         class="ring-study her-ring-image her-ring-image--quiet"
         src="assets/her_ring_quiet_alpha_v2.png"
-        alt="H.E.R Ring™ in a subdued illustrative state"
+        alt="H.E.R Ring in a subdued illustrative state"
         width="1027"
         height="1027"
         loading="lazy"
         decoding="async"
       />
       <div class="ring-copy">
-        <p class="section-label">H.E.R RING™</p>
+        <p class="slogan ring-state-label"><span class="slogan-line" style="text-transform: uppercase;">H.E.R RING STATE</span></p>
         <h2 class="section-title" id="ring-title">A persistent identity for your governed AI interactions.</h2>
-        <p>H.E.R Ring™ is the persistent visual identity of H.E.R.</p>
-        <p>The state of H.E.R Ring™ is coded to correspond to governed H.E.R interaction conditions rather than random animation.</p>
+        <p>H.E.R Ring is the persistent visual identity of H.E.R.</p>
+        <p>The state of H.E.R Ring is coded to correspond to governed H.E.R interaction conditions rather than random animation.</p>
         <p class="ring-note">Patents pending.</p>
       </div>
     </section>
@@ -1976,15 +2021,43 @@
     <section class="authority" aria-labelledby="authority-title">
       <div class="shell">
         <h2 id="authority-title">HUMAN AUTHORITY<br>REMAINS AUTHORITY.</h2>
+
+        <p class="slogan">
+          <span class="slogan-line" style="text-transform: uppercase;">
+            H.E.R locks neural intelligence routes into a deterministic vault.
+          </span>
+        </p>
+
         <div class="authority-lines">
           <p>Model output is not authority.</p>
-          <p>Agreement is not factual truth.</p>
-          <p>Synthesis is not institutional approval.</p>
+          <p>Agreement is not truth.</p>
+          <p>Synthesis is not approval.</p>
         </div>
-        <p class="authority-note">H.E.R is designed to preserve those distinctions and keep consequential disposition with an authorised human acting for the institution.</p>
-        <section class="truth-boundary" aria-labelledby="truth-boundary-title">
-          <h3 id="truth-boundary-title">TRUTH BOUNDARY</h3>
-          <p>“Evidenced dissent” means that independently generated route material and its provenance are preserved under governed custody with cryptographic integrity binding, including distinct contribution content where present. In the initial pilot, H.E.R does not infer or authenticate semantic agreement or disagreement between intelligences. Model-authored synthesis may contain relational language; such language is not authenticated by H.E.R.</p>
+
+        <p class="authority-note">
+          H.E.R is engineered to preserve the distinction between intelligence and authority.
+          She keeps consequential disposition with authorised human decision-makers acting for
+          the organisation. H.E.R does not make neural intelligence deterministic; she governs
+          the routes through which model outputs enter the governance process.
+          <br><br>
+          Probabilistic intelligences provide analysis; deterministic software governs
+          admission, execution constraints, evidence custody and authority boundaries.
+          Neither common agreement across model routes nor H.E.R’s synthesis transfers
+          official authority away from the authorised decision-makers consulting H.E.R.
+        </p>
+
+        <section class="truth-boundary" aria-labelledby="governance-truth-boundary-title">
+          <h3 id="governance-truth-boundary-title">GOVERNANCE &amp; TRUTH BOUNDARY</h3>
+          <p>
+            “Deterministic vault” names the governed software boundary around neural
+            intelligence routes; this does not mean model outputs are
+            deterministic or authoritative. “Evidenced dissent” means independently
+            generated route material and its provenance are preserved under governed
+            custody with cryptographic integrity binding, including distinct contribution
+            content where present. In the initial pilot, H.E.R does not yet infer or
+            authenticate semantic agreement or disagreement between intelligences;
+            model-authored relational language is not authenticated by H.E.R.
+          </p>
         </section>
       </div>
     </section>
@@ -2061,7 +2134,7 @@
         </li>
       </ul>
 
-      <a class="archive-link" href="research.html">Research archive →</a>
+      <a class="archive-link" href="research.html" target="_blank" rel="noopener noreferrer">Research archive →</a>
     </section>
 
     <section class="section shell procurement-identity" id="procurement" aria-labelledby="procurement-title">
@@ -2106,7 +2179,10 @@
 
         <p>HER2NI LLC is registered in the U.S. federal government's System for Award Management (SAM.gov). The registration was activated on 9 September 2026 for All Awards. NCAGE STVK9 identifies the company in NATO Codification System and U.S. federal supplier-registration workflows.</p>
         <p>H.E.R is being developed for bounded government and defence evaluation, pilot and procurement pathways. The official records linked above are the reference for current registration status.</p>
-        <p class="procurement-disclaimer">SAM.gov registration and NCAGE assignment do not imply government affiliation, endorsement, approved-vendor status, regulatory approval, product certification, or a contract or grant award. Eligibility remains specific to each procurement.</p>
+        <section class="truth-boundary procurement-boundary" aria-labelledby="procurement-boundary-title">
+          <h3 id="procurement-boundary-title">PROCUREMENT STATUS BOUNDARY</h3>
+          <p>SAM.gov registration and NCAGE assignment do not imply government affiliation, endorsement, approved-vendor status, regulatory approval, product certification, or a contract or grant award. Eligibility remains specific to each procurement.</p>
+        </section>
       </div>
     </section>
 
@@ -2134,7 +2210,7 @@
       Sakartvelo (Georgia), Tbilisi, Krtsanisi district, Nino and Ilia Nakashidze Street N 1,
       (former Avlev) Building N3, Apartment N3
     </address>
-    <p>HER2NI® is a registered trade mark in Australia.<br>H.E.R™, H.E.R Ring™, Intelligence Synthesis™, Many intelligences. Single voice.™, Many intelligences. One voice.™ and One human. Many intelligences. Single voice.™ are trade marks used in connection with H.E.R™.</p>
+    <p>HER2NI® is a registered trade mark in Australia.<br>H.E.R™, Intelligence Synthesis™, synthesisGain(...)™, Many intelligences. Single voice.™, Many intelligences. One voice.™ and One human. Many intelligences. Single voice.™ are trade marks used in connection with H.E.R™.</p>
     <p>Australian provisional patent applications filed.<br>HER2NI © 2026. All rights reserved.</p>
     <p>HER2NI LLC claims no government affiliation, endorsement, regulatory approval, certification or autonomous decision authority.<br /><br /><a href="privacy.html">Privacy</a></p>
   </footer>
