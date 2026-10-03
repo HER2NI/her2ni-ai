@@ -374,9 +374,9 @@
       position: relative;
       display: block;
       width: min(calc(100% - 11rem), 79.5rem);
-      height: 40.55rem;
-      min-height: 0;
-      padding-block: 4.75rem 2.75rem;
+      min-height: clamp(40rem, 48vw, 46rem);
+      height: auto;
+      padding-block: 4.75rem 4rem;
       border-bottom: 1px solid var(--line);
     }
 
@@ -674,6 +674,12 @@
     }
 
     .system-copy p:first-of-type {
+      color: var(--ink);
+      font-size: 1.15rem;
+    }
+
+    .system-copy p.synthesis-proof {
+      margin-top: 0.65rem;
       color: var(--ink);
       font-size: 1.15rem;
     }
@@ -1862,7 +1868,8 @@
 
       <p class="slogan"><span class="slogan-line">Intelligence Synthesis<sup class="slogan-tm">™</sup> | synthesisGain(...)<sup class="slogan-tm">™</sup></span><span class="slogan-line">Many intelligences. Single voice.<sup class="slogan-tm">™</sup></span></p>
       <div class="hero-rule" aria-hidden="true"></div>
-      <p class="descriptor">Intelligence synthesis for consequential decisions.</p>
+      <p class="descriptor">Intelligence synthesis for consequential decisions:<br />
+        The general-purpose AI-command environment.</p>
       <p class="hero-supporting">Independent multi-modal AI routes.<br>Verifiable provenance. Evidenced dissent.<br>Governed synthesis into one single voice.</p>
       <div class="hero-explanations">
         <p class="hero-copy">Created for governmental and institutional environments where transparency behind reasoning processes, competing views and authority to act can matter as much as the final answer.</p>
@@ -1983,7 +1990,8 @@
       <div class="system-layout">
         <div class="system-copy">
           <h2 class="section-title synthesis-gain-title" id="synthesis-gain-title"><span class="synthesis-gain-function">synthesisGain(...)<sup class="slogan-tm">™</sup></span><span class="synthesis-gain-statement">Synthesis must earn its complexity.</span></h2>
-          <p>H.E.R does not assume that combining more intelligences produces a better answer.</p>
+          <p>H.E.R does not assume H.E.R synthesis produces outputs superior to a single flagship model.</p>
+          <p class="synthesis-proof">She proves H.E.R gain.</p>
         </div>
 
         <div class="ring-copy">
@@ -2029,9 +2037,9 @@
         </p>
 
         <div class="authority-lines">
-          <p>Model output is not authority.</p>
-          <p>Agreement is not truth.</p>
           <p>Synthesis is not approval.</p>
+          <p>Output is not authority.</p>
+          <p>Agreement is not truth.</p>
         </div>
 
         <p class="authority-note">
@@ -2050,10 +2058,10 @@
           <h3 id="governance-truth-boundary-title">GOVERNANCE &amp; TRUTH BOUNDARY</h3>
           <p>
             “Deterministic vault” names the governed software boundary around neural
-            intelligence routes; this does not mean model outputs are
-            deterministic or authoritative. “Evidenced dissent” means independently
-            generated route material and its provenance are preserved under governed
-            custody with cryptographic integrity binding, including distinct contribution
+            intelligence routes; this does not mean model outputs are deterministic
+            or authoritative. “Evidenced dissent” means independently generated route
+            material and its provenance are preserved under governed custody with
+            cryptographic integrity binding, including distinct contribution
             content where present. In the initial pilot, H.E.R does not yet infer or
             authenticate semantic agreement or disagreement between intelligences;
             model-authored relational language is not authenticated by H.E.R.
